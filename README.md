@@ -1,5 +1,4 @@
-# ThinkTwice 2022
-## Modalidade Projeto
+# ThinkTwice Hackathon's 2022 Finalist Project
 
 ## Major BOT
 
