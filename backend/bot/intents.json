@@ -1,0 +1,42 @@
+{ "greeting": {
+         "patterns": ["Hi there", "Is anyone there?", "Hey", "Hello"],
+         "responses": [ "How are you?", "How is it going?"]
+        },
+  "feeling" : {
+        "patterns": [ "Good and you?", "Fine, how about you?", "I'm ok, how about you?", "What's up!"],
+        "responses": ["Good, thanks for asking, how can I help you?", "I'm doing fine, what can I do for you today?", "I'm fine as well, what do you need help with?", "I'm good, thank you for asking! How may I help you?"] 
+  },
+  "feeling_good" : {
+        "patterns": [ "I'm good", "I'm fine", "I am ok", "Fine, thanks", "Good, thanks", "Good"],
+        "responses": ["Good to hear, how can I help you?", "Wonderful, what can I do for you today?", "I'm glad, how may I help you?"] 
+  },
+  "feeling_bad" : {
+        "patterns": [ "Not so good", "I'm feeling bad", "I've been better", "Could be worse", "I've had better days"],
+        "responses": ["Sorry to hear that, how can I help you?", "How can I help you feel better?", "Oh, I'm sorry. How can I help you?"]
+  },
+  "action": {
+          "patterns" : ["I want to travel", "I would like to book a flight", "Book a flight", "Show me available flights", "Show me flights", "I need information on flights", "I will be traveling"],
+          "responses" : ["To help you book a flight I need you to give me your location.", 
+                "Before I can give you any suggestions I need access to your location.", "I can help you with that! But first, I need you location."]
+  },
+  "talk_human": {
+      "patterns" : ["I need help", "I want to talk to a humam", "I need a human", "Talk to desk help", "human agent", "I need help of an agent", "help", "live agent"],
+      "responses" : ["Seems like you want human help.", "Seems like you are having difficulties.", "It seems that you need a live agent to help you."]            
+  },
+  "goodbye": {
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon.", "I hope I helped, goodbye!"]
+        },
+  "thanks": {
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me", "thanks for the help", "huge help, thanks"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure", "Always available to make your life easier!"]
+        },
+  "noanswer": {
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "I don't think I understood", "Not sure I understand", "It seems that I may be misunderstanding you.", "I'm not quite sure I get what you are saying."]
+        },
+  "options": {
+         "patterns": ["How you could help me?", "What can you do?", "What help you provide?", "How can you be helpful?", "What is the support offered"],
+         "responses": ["I can help find great travel deals or connect to a human", "I can find flights all around the world or help you connect with a live agent", "I can help you book flights or connect with a human agent"]
+        }
+}

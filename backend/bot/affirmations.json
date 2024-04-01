@@ -1,0 +1,9 @@
+{ 
+    "affirmation": {
+        "patterns": ["Yes", "Affirmative", "Of corse", "I want to talk to a human", "I need help", "I want help"]
+    },
+    "negation" : {
+        "patterns": ["No", "Negative", "No, I don't", "I don't want to talk to a human", "I don't need help"]
+    }
+
+}

@@ -1,0 +1,46 @@
+version: "3.8"
+services:
+  database:
+    image: mysql
+    volumes:
+      - ./mysql/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: "pw"
+  
+  ejabberd:
+    build:
+      context: ./ejabberd
+      args:
+        VERSION: 20.01
+    image: ejabberd/ecs:20.01
+    environment:
+      DATABASE: database
+      AUTHSERVER: authserver
+    ports:
+      - 8888:8888
+      - 5222:5222
+      - 5443:5443
+    depends_on:
+      - database
+    volumes:
+      - ./ejabberd/extauth.log:/var/log/ejabberd/extauth.log
+      - ./ejabberd/extauth_err.log:/var/log/ejabberd/extauth_err.log
+  
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./client:/usr/share/nginx/html
+    ports:
+      - 8081:8002
+    depends_on:
+      - ejabberd
+
+  #postgres:
+  #  image: postgres:latest
+  #  ports:
+  #    - 5432:5432 
+  #  environment:
+  #    POSTGRES_USER: es
+  #    POSTGRES_PASSWORD: es
+  #    POSTGRES_DB: postgres

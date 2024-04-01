@@ -1,0 +1,89 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#f4f7f6;  
+    font-family: 'Arial';  
+}  
+
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #fff;  
+        border-radius: 15px ;       
+}  
+
+h2{  
+    text-align: center;  
+    color: #0b5ed7;  
+    padding: 20px;  
+}  
+
+label{  
+    color: #0b5ed7;  
+    font-size: 17px;  
+}  
+
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    background-color: #f4f7f6;  
+    border-radius: 3px;  
+    padding-left: 8px;
+    margin-bottom: 20px; 
+}  
+
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    background-color: #f4f7f6;
+    border-radius: 3px;  
+    padding-left: 8px;
+    margin-bottom: 20px;  
+}  
+
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #0b5ed7; 
+    color: #fff; 
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+
+.client {
+    background-color: #216ad8;
+    color: #fff;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+}
+
+.client:after {
+    bottom: 100%;
+    left: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #216ad8;
+    border-width: 10px;
+    margin-left: -10px
+}

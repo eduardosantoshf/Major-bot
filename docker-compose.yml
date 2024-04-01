@@ -1,0 +1,58 @@
+version: "3.3"
+services:
+  frontend:   
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports: 
+      - '8080:80'
+
+  helpdesk:
+    build:
+      context: helpDesk
+      dockerfile: Dockerfile
+    ports: 
+      - '8082:80'
+
+  backend:
+    build:
+      context: backend/bot/
+      dockerfile: Dockerfile
+    ports:
+      - '8001:8001'
+  
+  flights_api:
+    build:
+      context: backend/flights_api
+      dockerfile: Dockerfile
+    ports:
+    - '5000:8000'
+
+  database:
+    image: mysql
+    volumes:
+      - ./chatroom/mysql/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: "pw"
+  
+  ejabberd:
+    build:
+      context: ./chatroom/ejabberd
+      args:
+        VERSION: 20.01
+    image: ejabberd/ecs:20.01
+    environment:
+      DATABASE: database
+      AUTHSERVER: authserver
+    ports:
+      - 8888:8888
+      - 5222:5222
+      - 5443:5443
+    depends_on:
+      - database
+    volumes:
+      - ./chatroom/ejabberd/extauth.log:/var/log/ejabberd/extauth.log
+      - ./chatroom/ejabberd/extauth_err.log:/var/log/ejabberd/extauth_err.log
+    
+volumes:
+  db-data:
