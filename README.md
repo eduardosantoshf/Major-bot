@@ -92,3 +92,8 @@ Our API documentation can be found at `http://localhost:8888/docs#/`.
 * Improve some live chat features and interactions;
 * Increase reliability using docker swarm;
 * Integrate with a real booking system;
+
+## Authors
+* **Eduardo Santos**: [eduardosantoshf](https://github.com/eduardosantoshf)
+* **Pedro Bastos**: [bastos-01](https://github.com/bastos-01)
+* **Rafael Teixeira**: [rgtzths](https://github.com/rgtzths)
